@@ -1,0 +1,28 @@
+class SessionsController < ApplicationController
+
+      def new
+      end
+
+      def create 
+      	  @user = User.find_by_email(params[:session][:email])
+	  if @user && @user.authenticate(params[:session][:password])
+	  if @user.email_confirmed
+	     session[:user_id] = @user.id
+	     redirect_to '/'
+	  else
+	     flash.now[:error] = 'please verify account by following sent url'
+	     redirect_to 'login'
+	  end
+	  else
+		flash.now[:error] = 'invalid Email/password combo'
+		render 'new'
+	  end
+	  
+      end
+
+      def destroy
+      	  session[:user_id] = nil
+	  redirect_to '/'
+      end
+
+end

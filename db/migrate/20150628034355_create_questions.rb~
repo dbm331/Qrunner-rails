@@ -1,0 +1,13 @@
+class CreateQuestions < ActiveRecord::Migration
+  def change
+    create_table :questions do |t|
+      t.integer :question_number
+      t.text :prompt
+      t.string :image      
+      t.belongs_to :topic, index: true
+      t.belongs_to :test, index: true
+
+      t.timestamps
+    end
+  end
+end

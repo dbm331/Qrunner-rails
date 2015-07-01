@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+
+Hi <%= @user.first_name %>,
+
+Thanks for joining; to confirm registration with QRUNNER cleck below,
+
+<%= confirm_email_user_url(@user.confirm_token) %>
+</html>
