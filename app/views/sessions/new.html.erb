@@ -2,8 +2,9 @@
   <div class="container">
     <div class="form">
 
-      <h1>Log in</h1>
-      <a href="/">Home</a>
+      <h1>Log in</h1><br><br>
+      <a href="/", class="btn-submit">Home</a><br><br>
+      <a href="/", class="btn-submit">Forgot Password?</a><br><br>
       <%= form_for(:session, url: login_path) do |f| %>
         <%= f.email_field :email, :placeholder => "Email" %>
 	<%= f.password_field :password, :placeholder => "Password" %>
