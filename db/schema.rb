@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150628061556) do
+ActiveRecord::Schema.define(version: 20150720025607) do
 
   create_table "messages", force: :cascade do |t|
     t.text     "content"
@@ -55,10 +55,13 @@ ActiveRecord::Schema.define(version: 20150628061556) do
     t.string   "email"
     t.string   "password_digest"
     t.string   "role"
+    t.string   "random"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "email_confirmed", default: false
+    t.boolean  "email_confirmed",        default: false
     t.string   "confirm_token"
+    t.string   "password_reset_token"
+    t.datetime "password_reset_sent_at"
   end
 
 end

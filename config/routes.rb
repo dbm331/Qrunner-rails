@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+ 
+        get 'password_resets/new' => 'password_resets#new'
+	get 'password_resets/edit' => 'password_resets#edit'
 	root 'pages#home'
 	get '/messages' => 'messages#index'
 	get '/messages/new' => 'messages#new'
@@ -13,7 +16,7 @@ Rails.application.routes.draw do
 	post 'login' => 'sessions#create'
 
 	delete 'logout' => 'sessions#destroy'
-
+	resources :password_resets
 	resources :users do
     member do
       get :confirm_email
