@@ -2,14 +2,13 @@
   <div class="container">
     <div class="form">
 
-    <h1>Sign up for QRUNNER</h1>
-    <a href="/">Home</a>
+    <h1>Sign Up</h1><br><br>
        <%= form_for(@user) do |f| %>
 
 	 <%= f.text_field :first_name, :placeholder => "first name" %>
 	 <%= f.text_field :last_name, :placeholder => "last name" %>
-	 <%= f.email_field :email %>
-	 <%= f.password_field :password %>
+	 <%= f.email_field :email, :placeholder => "Email" %>
+	 <%= f.password_field :password, :placeholder => "Password" %>
 	 <%= f.submit "Create Account", class: "btn-submit" %>
       
        <% end %>

@@ -3,7 +3,7 @@
     <div class="form">
 
     <h1>Sign up for QRUNNER</h1>
-
+    <a href="/">Home</a>
        <%= form_for(@user) do |f| %>
 
 	 <%= f.text_field :first_name, :placeholder => "first name" %>

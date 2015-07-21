@@ -9,13 +9,9 @@
      </ul>
    </div>
  <% end %>
- <div class="field">
-   <%= f.label :password %>
+ <div class="form">
+   <%= f.label "Enter New Password" %>
    <%= f.password_field :password %>
+   <%= f.submit "Update Password", class: "btn-submit" %>
  </div>
- <div class="field">
-   <%= f.label :password_confirmation %>
-   <%= f.password_field :password_confirmation %>
- </div>
- <div class="actions"><%= f.submit "Update Password" %></div>
 <% end %>

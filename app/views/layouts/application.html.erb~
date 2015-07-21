@@ -14,7 +14,7 @@
     <div class="header">
       <div class="container">
         <%= link_to root_path do %>
-          <img src="http://s3.amazonaws.com/codecademy-content/courses/rails-auth/img/fotofoto-logo.svg" width="80" height="80"> &#12501; &#65387; &#12488; &#12501; &#65387; &#12488;
+          Qrunner Home
         <% end %>
 
         <div class="nav pull-right">
